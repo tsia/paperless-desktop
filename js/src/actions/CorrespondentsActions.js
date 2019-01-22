@@ -19,7 +19,9 @@ class CorrespondentsActions {
 
 	// GET CORRESPONDENTS
 	getCorrespondents() {
-		var url = localStorage.getItem("settings.host") + "/api/correspondents/";
+		var url =
+			localStorage.getItem("settings.host") +
+			"/api/correspondents/?ordering=name&page_size=0";
 
 		axios({
 			method: "get",
